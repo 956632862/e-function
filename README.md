@@ -8,7 +8,13 @@
 + `formatter.js`    主要为格式化类别的函数
 + `util.js` 主要为日常使用会使用到的函数  
   (以后添加新的函数，也会一一在文档之中说明)  
-## 使用
+## 安装以及使用
+安装方式
+```js
+npm install easy-function 
+or 
+yarn add easy-function
+```
 使用方式目前有两种：
 ### 1 使用由index.js导出的函数合集
 ```js
