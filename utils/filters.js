@@ -1,7 +1,6 @@
 /**
  * 过滤器函数
  */
-
 // 转换手机号码中间四位
 export function telFormat(mobile){
     return mobile.substring(0, 3) + '****' + mobile.substring(7)
@@ -13,8 +12,12 @@ export function formatFour(data){
     return sliceData.substring(sliceData.length-4, sliceData.length)
 }
 
-// 格式化日期,只拿年月日
+/**
+ * @param time [yyyy-mm-dd hh:ii:ss]
+ * @returns {string}
+ */
 export function timeFormat(time){
     return time.substring(0,10)
 }
+
 
