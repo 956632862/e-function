@@ -7,6 +7,18 @@ export function getDataType(data){
     return Object.prototype.toString.call(data).slice(8, -1)
 }
 
+// 复制文本
+export function copyText(text = ''){
+    const input = document.createElement('input');
+    document.body.appendChild(input);
+    input.setAttribute('value', text);
+    input.select();
+    if (document.execCommand('copy')) {
+        document.execCommand('copy');
+    }
+    document.body.removeChild(input);
+}
+
 // 判断数据是空 空为true
 export function isEmpty(data){
     // 先判断空数组或者空对象
