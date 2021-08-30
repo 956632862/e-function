@@ -47,6 +47,46 @@ export function deepClone(target = null){
     return _deepData
 }
 
+/**
+ * @description 防抖：在事件被触发n秒之后再执行，如果再次触发，就重新计时,必须先定义，再执行
+ * @param cb 回调函数
+ * @return function cb
+ */
+export function debounce(cb,delay = 1000){
+    let id = null
+    return function () {
+        if (id) clearTimeout(id)
+        id = setTimeout(()=>{
+            cb()
+        },delay)
+    }
+}
+
+/**
+ * @description 节流：在一段时间内，函数只能触发一次
+ * @param cb 回调函数
+ * @return function cb
+ */
+export function throttle(cb,delay=1000){
+    let last, deferTimer
+    return function (args) {
+        let that = this
+        let _args = arguments
+        let now = +new Date()
+        if (last && now < last + delay) {
+            clearTimeout(deferTimer)
+            deferTimer = setTimeout(function () {
+                last = now
+                cb.apply(that, _args)
+            }, delay)
+        }else {
+            last = now
+            cb.apply(that,_args)
+        }
+    }
+}
+
+
 // 判断设备
 export function getUserAgent() {
     let u = navigator.userAgent

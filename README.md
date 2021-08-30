@@ -22,7 +22,7 @@ import efunction form "easy-function"
 ```
 ### 2 使用各个模块自己的函数
 ```js
-import filters form "easy-function/utils/filters"
+import * as  filters form "easy-function/utils/filters"
 import {telFormat} form "easy-function/utils/filters"
 ```
 之后调用相应的函数可。

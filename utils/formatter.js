@@ -9,7 +9,7 @@
  * @param targetFormat []
  * @returns {*}
  */
-export  function formatItems(items =[], rawFormat = ['name', 'id'], targetFormat = ['label', 'value']){
+export function formatItems(items =[], rawFormat = ['name', 'id'], targetFormat = ['label', 'value']){
     return items.map(item => {
         const res = {...item}
         rawFormat.forEach((f, index) => {
