@@ -1,3 +1,6 @@
+/**
+ * 格式化函数
+ */
 
 /**
  * @description 根据rawFormat，targetFormat 格式化数据并且返回新的数组

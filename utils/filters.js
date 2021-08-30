@@ -13,6 +13,7 @@ export function formatFour(data){
 }
 
 /**
+ * @description 截取时间前面部分
  * @param time [yyyy-mm-dd hh:ii:ss]
  * @returns {string}
  */

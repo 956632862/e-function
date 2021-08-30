@@ -7,6 +7,11 @@ export function getDataType(data){
     return Object.prototype.toString.call(data).slice(8, -1)
 }
 
+// 判断数据类型，首字母大写
+function checkType(data,type) {
+    return getDataType(data) === type
+}
+
 // 复制文本
 export function copyText(text = ''){
     const input = document.createElement('input');
