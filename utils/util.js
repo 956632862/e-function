@@ -50,6 +50,7 @@ export function deepClone(target = null){
 /**
  * @description 防抖：在事件被触发n秒之后再执行，如果再次触发，就重新计时,必须先定义，再执行
  * @param cb 回调函数
+ * @param delay
  * @return function cb
  */
 export function debounce(cb,delay = 1000){
@@ -75,7 +76,7 @@ export function throttle(cb,delay=1000){
         let now = +new Date()
         if (last && now < last + delay) {
             clearTimeout(deferTimer)
-            deferTimer = setTimeout(function () {
+            deferTimer = setTimeout(  function () {
                 last = now
                 cb.apply(that, _args)
             }, delay)
