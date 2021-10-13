@@ -6,21 +6,12 @@
 </head>
 
 <script type="module">
-    import {deepClone} from "./utils/util.js"
-    const obj = {
-        date:new Date(),
-        pattern: /jack/g,
-        array:[1,2,3]
-    }
-    console.log(deepClone(obj))
-    // const input =  document.getElementById('debounce')
-    // input.oninput = throttle(()=>{
-    //     // console.log('最后输出')
-    // })
+    import fn from "./index.js"
+    fn.selectSort([1,123,32,3,4,5,2,11,2,3,4,900,2,99,44])
+
 </script>
 
 <body>
-<input type="text" id="debounce">
 </body>
 
 </html>

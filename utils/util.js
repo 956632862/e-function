@@ -7,7 +7,12 @@ export function getDataType(data){
     return Object.prototype.toString.call(data).slice(8, -1)
 }
 
-// 判断数据类型，首字母大写
+/**
+ * @description 判断数据类型，首字母大写
+ * @param data
+ * @param type
+ * @return {boolean}
+ */
 function checkType(data,type) {
     return getDataType(data) === type
 }
@@ -126,3 +131,4 @@ export function getUserAgent() {
     }
     return result
 }
+
