@@ -83,7 +83,7 @@ export function innerSort(array){
  */
 export function selectSort(array){
     /**
-     * 选择排序基本思想：将最小的数据筛选出来逐步放到新的数组中
+     * 选择排序基本思想：先找出最大或者最小的数，然后将其放入新的数组
      */
     let sort_array =[]
     let index_value = null
