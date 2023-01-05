@@ -21,7 +21,7 @@ export function getParameters(URL){
  * @return {*}
  */
 export function getParams(key,url){
-    const params = getParameters()
+    const params = getParameters(url)
     return params[key]
 }
 
