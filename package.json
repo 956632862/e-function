@@ -15,7 +15,8 @@
   ],
   "author": "Pj",
   "license": "MIT",
-  "dependencies": {
+  "dependencies": {},
+  "devDependencies": {
     "docdash": "^2.0.0"
   }
 }

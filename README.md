@@ -8,7 +8,7 @@
 + `util.js` 主要为日常使用会使用到的函数  
   (以后添加新的函数，也会一一在文档之中说明) 
 
-### [api文档](http://efcuntiondoc.pjemmm.cn/)
+### [api文档](https://efcuntiondoc.pjemmm.cn/)
 
 ## 安装以及使用
 安装方式
