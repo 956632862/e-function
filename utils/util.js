@@ -1,8 +1,35 @@
 /**
- * 日常使用函数
+ * 常用工具
+ * @module util
  */
 
-// 获取数据类型
+
+/**
+ * @description 获取url上的参数并且转换为对象
+ * @param URL 如果不传，则为当前的url
+ * @return {any}
+ */
+export function getParameters(URL){
+  const _url = URL || window.location.href
+  return JSON.parse(`{"${decodeURI(_url.split("?")[1]).replace(/"/g, '\\"').replace(/&/g, '","').replace(/=/g, '":"')}"}`)
+}
+
+/**
+ * @description 获取url上的参数
+ * @param key 键名
+ * @param url 链接，如果不传则为当前的url
+ * @return {*}
+ */
+export function getParams(key,url){
+    const params = getParameters()
+    return params[key]
+}
+
+/**
+ * @description 获取数据类型
+ * @param data 数据
+ * @return {string}
+ */
 export function getDataType(data){
     return Object.prototype.toString.call(data).slice(8, -1)
 }
@@ -17,8 +44,11 @@ function checkType(data,type) {
     return getDataType(data) === type
 }
 
-// 复制文本
-export function copyText(text = ''){
+/**
+ * @description 复制文本
+ * @param text 需要复制的文本
+ */
+export function copy(text = ''){
     const input = document.createElement('input');
     document.body.appendChild(input);
     input.setAttribute('value', text);
@@ -30,6 +60,11 @@ export function copyText(text = ''){
 }
 
 // 判断数据是空 空为true
+/**
+ * @description 判断数据是否为空，支持 非引用数据类型与引用数据类型
+ * @param data
+ * @return {boolean}
+ */
 export function isEmpty(data){
     // 先判断空数组或者空对象
     getDataType(data) === 'Object' && (data = Object.keys(data))
@@ -37,7 +72,11 @@ export function isEmpty(data){
     return !data
 }
 
-// 深层拷贝
+/**
+ * @description 对象深拷贝 支持 对象 数组
+ * @param target
+ * @returns {(Object|Array)}
+ */
 export function deepClone(target = null){
     const whiteType = ['Object','Array']
     if (!whiteType.includes(getDataType(target))) return target
@@ -53,7 +92,7 @@ export function deepClone(target = null){
 }
 
 /**
- * @description 防抖：在事件被触发n秒之后再执行，如果再次触发，就重新计时,必须先定义，再执行
+ * @description 防抖（闭包）：在事件被触发n秒之后再执行，如果再次触发，就重新计时,必须先定义，再执行
  * @param cb 回调函数
  * @param delay
  * @return function cb
@@ -69,7 +108,7 @@ export function debounce(cb,delay = 1000){
 }
 
 /**
- * @description 节流：在一段时间内，函数只能触发一次
+ * @description 节流（闭包）：在一段时间内，函数只能触发一次
  * @param cb 回调函数
  * @return function cb
  */
@@ -93,7 +132,10 @@ export function throttle(cb,delay=1000){
 }
 
 
-// 判断设备
+/**
+ * @description 获取设备类型
+ * @return {{iPhone: boolean, webApp: boolean, QQ: boolean, webview: (false|RegExpMatchArray), trident: boolean, alipay: boolean, ucLowEnd: boolean, android: boolean, mobile: boolean, ucSB: boolean, ios: boolean, webKit: boolean, gecko: boolean, weiXin: boolean, weiBo: boolean, Symbian: boolean, ucSpecial: boolean, ucweb: (boolean|undefined), iPad: boolean, QQbrw: boolean, presto: boolean}}
+ */
 export function getUserAgent() {
     let u = navigator.userAgent
     let ua = navigator.userAgent.toLocaleLowerCase()

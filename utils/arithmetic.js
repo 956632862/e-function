@@ -1,7 +1,15 @@
 /**
- * @description 快速排序
+ * 排序
+ * @module arithmetic
  */
-export function quickSort(array){
+
+
+/**
+ * @description 快速排序
+ * @param array 数组
+ * @param sort 默认 正序asc 倒序desc
+ */
+ export function quickSort(array,sort = 'asc'){
     /**
      * 快排基本思想：采用分而治之的方法来对数据进行排序
      * 步骤：
@@ -28,11 +36,15 @@ export function quickSort(array){
     left = left.sort((a,b) => a-b)
     right  = right.sort((a,b) => a-b)
     left.push(rand)
-    return left.concat(right)
+    if (sort === 'asc') return left.concat(right)
+    if (sort === 'desc') return left.concat(right).reverse()
+
 }
 
 /**
  * @description 冒泡排序
+ * @param array 数组
+ * @ignore
  */
 export function bubbleSort(array){
     /**
@@ -58,6 +70,8 @@ export function bubbleSort(array){
 
 /**
  * @description 插入排序
+ * @param array 数组
+ * @ignore
  */
 export function innerSort(array){
     /**
@@ -80,6 +94,8 @@ export function innerSort(array){
 
 /**
  * @description 选择排序
+ * @param array 数组
+ * @ignore
  */
 export function selectSort(array){
     /**

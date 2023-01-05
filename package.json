@@ -4,6 +4,7 @@
   "description": "这是一个将日常开发使用的函数集合的库",
   "main": "index.js",
   "scripts": {
+    "jsdoc": "jsdoc -r ./README.md -c ./conf.json ",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -13,5 +14,8 @@
     "日常使用函数"
   ],
   "author": "Pj",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "docdash": "^2.0.0"
+  }
 }
