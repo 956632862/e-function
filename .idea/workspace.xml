@@ -2,15 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c67863df-bb6f-47aa-85f5-da67ec88792e" name="变更" comment="">
-      <change afterPath="$PROJECT_DIR$/conf.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/arithmetic.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/arithmetic.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/filters.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/filters.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/formatter.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/formatter.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils/util.js" beforeDir="false" afterPath="$PROJECT_DIR$/utils/util.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +62,7 @@
       <option name="presentableId" value="Default" />
       <updated>1672724867144</updated>
       <workItem from="1672724868741" duration="1442000" />
-      <workItem from="1672886402530" duration="7696000" />
+      <workItem from="1672886402530" duration="7817000" />
     </task>
     <servers />
   </component>
