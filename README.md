@@ -29,3 +29,19 @@ import {telFormat} form "e-function/utils/filters"
 ```
 之后调用相应的函数可。
 
+## 已知可能错误
+### 导入依赖包报错Module parse failed
+出现这个是因为一些旧的项目并不支持部分ES6语法
+在`webpack`的配置中添加当前依赖包即可
+```js
+module:{
+    rules:{
+      {
+        test: /\.js$/, 
+        loader: 'babel-loader',
+        include: [ resolve('node_modules/e-function') ]
+      },
+    }
+}
+```
+

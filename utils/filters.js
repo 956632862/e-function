@@ -30,5 +30,3 @@ export function formatFour(data){
 export function timeFormat(time){
     return time.substring(0,10)
 }
-
-
