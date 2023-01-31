@@ -13,6 +13,10 @@
     "easy",
     "日常使用函数"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:956632862/e-function.git"
+  },
   "author": "Pj",
   "license": "MIT",
   "dependencies": {},
