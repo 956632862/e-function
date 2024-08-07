@@ -7,13 +7,22 @@
 
 <script type="module">
     import fn from "./index.js"
-    console.log(fn,'fn')
+    const fn1 =   fn.throttle(() => {
+        console.log('我来了')
+    },1000)
+    document.getElementById('test').addEventListener('click',() => {
+        fn1()
+    })
+
+
+    // console.log(fn,'fn')
     // console.log(fn.getParameters(),'fn.getParameters()')
     // console.log(fn.getParams())
 
 </script>
 
 <body>
+<button id="test">12321321</button>
 </body>
 
 </html>

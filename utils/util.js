@@ -59,7 +59,6 @@ export function copy(text = ''){
     document.body.removeChild(input);
 }
 
-// 判断数据是空 空为true
 /**
  * @description 判断数据是否为空，支持 非引用数据类型与引用数据类型
  * @param data
@@ -122,7 +121,7 @@ export function throttle(cb,delay=1000){
             clearTimeout(deferTimer)
             deferTimer = setTimeout(  function () {
                 last = now
-                cb.apply(that, _args)
+                // cb.apply(that, _args)
             }, delay)
         }else {
             last = now
@@ -172,5 +171,21 @@ export function getUserAgent() {
         ucSB: u.indexOf('Firofox/1.') > -1
     }
     return result
+}
+
+
+/**
+ * @description 往URl上提添加参数
+ * @param params 需要添加到url的参数
+ * @param url 路径，不传入则为当前路径
+ * @return {string}
+ */
+export function addUrlParams(params = {},url ){
+    let _url = url || window.location.href
+    for (const paramsKey in params) {
+        _url += _url.indexOf('?') !== -1 ? `&` : '?'
+        _url += `${paramsKey}=${params[paramsKey]}`
+    }
+    return _url
 }
 
