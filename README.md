@@ -8,7 +8,34 @@
 + `util.js` 主要为日常使用会使用到的函数  
   (以后添加新的函数，也会一一在文档之中说明) 
 
-### [api文档](https://efcuntiondoc.pjemmm.cn/)
+## 当前已有的功能
+需要传输的参数得看对应的文件
+### arithmetic 文件
++ 快速排序：quickSort
++ 冒泡排序：bubbleSort
++ 插入排序：innerSort
++ 选择排序：selectSort
+### filters 文件
++ 转换手机号码中间四位：telFormat
++ 截取数字的后面四位：formatFour
++ 截取时间前面部分：timeFormat
+### formatter 文件
++ 返回指定格式的数组：formatItems
+### util 文件
++ 获取url上的参数并且转换为对象：getParameters
++ 获取url上的参数：getParams
++ 获取数据类型：getDataType
++ 判断数据类型，首字母大写：checkType
++ 复制文本：copy
++ 判断数据是否为空，支持 非引用数据类型与引用数据类型：isEmpty
++ 对象深拷贝 支持 对象 数组：deepClone
++ 防抖（闭包）：debounce
++ 节流（闭包）：throttle
++ 获取设备类型：getUserAgent
++ 往URl上提添加参数：addUrlParams
++ 判断是否为json字符串：isJsonString
++ 从身份证中提取出生日期：getBirthFromIDCard
+
 
 ## 安装以及使用
 安装方式

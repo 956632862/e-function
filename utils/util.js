@@ -189,3 +189,34 @@ export function addUrlParams(params = {},url ){
     return _url
 }
 
+/**
+ * @description 判断是否为json字符串
+ * @param str 字符串
+ * @return {boolean}
+ */
+export function isJsonString(str) {
+    try {
+        JSON.parse(str)
+    } catch (e) {
+        return false
+    }
+    return true
+}
+
+/**
+ * @description 从身份证中提取生日
+ * @param idCard 身份证号码
+ * @return {string}
+ */
+export const  getBirthFromIDCard = (idCard) => {
+    if (idCard.length === 18) {
+        const year = idCard.substring(6, 10);
+        const month = idCard.substring(10, 12);
+        const day = idCard.substring(12, 14);
+        return year + "-" + month + "-" + day;
+    } else {
+        console.error("身份证号码格式不正确，应为18位");
+        return null;
+    }
+}
+
